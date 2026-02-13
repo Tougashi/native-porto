@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">
+                <span class="mon">Profile</span>
+            </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#timeline">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#gear">Gear</a>
+            </nav>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                <span class="icon-sun" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364 2.636l-1.591 1.591M21 12h-2.25m-.364 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                </span>
+                <span class="icon-moon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                </span>
+            </button>
+        </header>
+
+        <main class="content">
+            <section class="hero" id="about">
+                <div class="hero-card">
+                    <div class="hero-media">
+                        <img src="public/images/profile.jpg" alt="Foto profil" />
+                    </div>
+                    <div class="hero-text">
+                        <p class="kicker">Personal Profile</p>
+                        <h1>Muhammad Adryan Suryaman</h1>
+                        <p class="role">$SOL & $ETH | Web3 & Blockchain Enthusiast | Full-stack Developer | Game Developer</p>
+                        <p class="summary">
+                            A programmer with an interest in Full-Stack Development, Game Development, Blockchain & Web3 Skilled in meeting deadlines while demonstrating creativity and deep technical proficiency.
+                        </p>
+                        <!-- <div class="cta">
+                            <button class="btn">Download CV</button>
+                            <button class="btn ghost">Contact</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="hero-grid">
+                    <div class="grid-card">
+                        <p class="label">Status</p>
+                        <p class="value">Available</p>
+                        <p class="hint">Freelance + Contract</p>
+                    </div>
+                    <div class="grid-card">
+                        <p class="label">Portfolio</p>
+                        <p class="value">github.com/Tougashi</p>
+                    </div>
+                    <div class="grid-card">
+                        <p class="label">Contact</p>
+                        <p class="value">rootougashi@gmail.com</p>
+                        <p class="hint">+6285877171626</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="data">
+                <div class="panel-head">
+                    <h2>Personal Data</h2>
+                </div>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span>Full Name</span>
+                        <strong>Muhammad Adryan Suryaman</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Email</span>
+                        <strong>rootougashi@gmail.com</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Location</span>
+                        <strong>Tasikmalaya, West Java, ID</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Education</span>
+                        <strong>Computer Science, Informatics</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>Languages</span>
+                        <strong>ID / EN / JP / DE</strong>
+                    </div>
+                    <div class="data-item">
+                        <span>LinkedIn</span>
+                        <strong>linkedin.com/in/adryann</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="timeline">
+                <div class="panel-head">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Full Stack & Game Developer</h3>
+                            <p class="meta">June - December 2023 · Cikara Studio (Internship)</p>
+                            <p>Contributed to the development of a web-based delivery platform interconnected with a mobile application via REST API and Firebase. Developed a web-based comic platform using Laravel 10 and MySQL. Contributed to the development of a multiplayer desktop game and a mobile RPG game as a game designer and programmer using Unity and C#.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Full Stack Developer</h3>
+                            <p class="meta">January - May 2024 · Transportasi ULBI (Contract)</p>
+                            <p>Developed a user-centered and responsive landing page, effectively communicating the institution's offerings using Laravel 10 and MySQL. Designed and implemented a dynamic article management website using Figma. Developed an administrator web platform for event management.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Full-stack Developer</h3>
+                            <p class="meta">April 2025 - December 2025 · MTD Service Dallas (Contract)</p>
+                            <p>Full-stack developer at MTD Service Dallas, building and maintaining multiple high-conversion service websites including Apollo Garage Doors Dallas, Maxim Garage Doors, Deloi Garage Door, Springer Garage Door, MC Garage Door Dallas, As New Air Duct, Pure Flow Air Duct, and Royal Ducts using Next.js, JavaScript, and TypeScript.</p>
+                            <p>Led end-to-end SEO implementation (technical SEO, schema markup, Core Web Vitals optimization, dynamic routing, and content structuring) to improve search rankings, organic traffic, and local lead generation across all properties.</p>
+                            <p>Designed and developed a custom internal CRM system for lead management, call tracking, and job workflow automation, integrating form pipelines, real-time dashboards, and role-based access to streamline operations and reporting.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Full-stack Developer</h3>
+                            <p class="meta">April 2025 - Now · Reku Digital (Full time)</p>
+                            <p>Full-stack developer for Reku Digital, delivering a company profile landing page for Nauli Consultants using React with a focus on responsive design, performance optimization, and clean component architecture.</p>
+                            <p>Developed the e-commerce website for Nadin Sportwear using Next.js, implementing dynamic product pages, SEO-friendly routing, and optimized asset delivery for fast load times and improved user experience.</p>
+                            <p>Built a custom CRM system using Laravel to manage customer data, order tracking, and internal workflows, including authentication, role-based access control, and reporting dashboards to support business operations.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" id="education">
+                <div class="panel-head">
+                    <h2>Education</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Bachelor's Degree in Computer Science</h3>
+                            <p class="meta">2024 - Present · Siliwangi University</p>
+                            <p>Majoring in Informatics with GPA 3.85 (3 Semester). Active as Member of Siliwangi Game Developer organization.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="dot"></div>
+                        <div>
+                            <h3>Software and Game Development</h3>
+                            <p class="meta">2021 - 2024 · SMK Negeri 2 Tasikmalaya</p>
+                            <p>Graduated with Grade 89.17 and Very competent certificate Web Developer Competency Test with industry. Served as Chairman of the Computer Engineering and Informatics Students Association.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" id="skills">
+                <div class="panel-head">
+                    <h2>Core Skills</h2>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">Web Development</h3>
+                    <div class="tag-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>Python</span>
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>CodeIgniter</span>
+                        <span>Node.js</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>TailwindCSS</span>
+                        <span>Vue.js</span>
+                        <span>Bootstrap</span>
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>SQLite</span>
+                        <span>Firebase</span>
+                        <span>Supabase</span>
+                        <span>Rest API</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Mobile Development</h3>
+                    <div class="tag-list">
+                        <span>Dart / Flutter</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Game Development</h3>
+                    <div class="tag-list">
+                        <span>Unreal Engine</span>
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Tiled</span>
+                        <span>Game Concept</span>
+                        <span>Game Environment</span>
+                        <span>Game Design</span>
+                        <span>Game Tester</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Web3 / Blockchain</h3>
+                    <div class="tag-list">
+                        <span>Solidity</span>
+                        <span>Smart Contracts</span>
+                        <span>Web3 integration (ether.js, web3.js)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="gear">
+                <div class="panel-head">
+                    <h2>Gear & Setup (For Development, Movies, Music, Games, etc.)</h2>
+                </div>
+                <div class="gear-list">
+                    <div class="gear-item">
+                        <div class="gear-icon">⚙️</div>
+                        <div class="gear-info">
+                            <h4>Processor</h4>
+                            <p>AMD Ryzen 7 8845HS w/ Radeon 780M Graphics 3.80 GHz</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">🎮</div>
+                        <div class="gear-info">
+                            <h4>VGA</h4>
+                            <p>Nvidia Geforce RTX 4060 8GB</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">💾</div>
+                        <div class="gear-info">
+                            <h4>RAM</h4>
+                            <p>32GB DDR5 5600Mhz Dual Channel (16x2)</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">💿</div>
+                        <div class="gear-info">
+                            <h4>Storage</h4>
+                            <p>1TB Nvme Gen 4 x4 Samsung Evo</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">🖥️</div>
+                        <div class="gear-info">
+                            <h4>Monitor</h4>
+                            <p>Skyworth H27G30Q 2K 180Hz</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">⌨️</div>
+                        <div class="gear-info">
+                            <h4>Keyboard</h4>
+                            <p>Vortex Series Xera 87 TKL Outemu Jade White</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">🖱️</div>
+                        <div class="gear-info">
+                            <h4>Mouse</h4>
+                            <p>Vortex Series Oni R1</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-icon">🎧</div>
+                        <div class="gear-info">
+                            <h4>IEM</h4>
+                            <p>KZ DFi Tunningable</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Made with ❤️ by Tougashi</p>
+            <p>&copy; <span id="year"></span></p>
+        </footer>
+    </div>
+
+    <script src="public/js/main.js"></script>
+</body>
+</html>
