@@ -360,6 +360,30 @@ html:not([data-theme]) body {
     margin-bottom: 8px;
 }
 
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.timeline-list li {
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    color: var(--ink);
+}
+
+.timeline-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
 .skills-category {
     margin-bottom: 24px;
 }
