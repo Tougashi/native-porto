@@ -222,12 +222,17 @@ html:not([data-theme]) body {
 }
 
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border: none;
     background: var(--accent);
     color: var(--btn-text);
     padding: 10px 18px;
     border-radius: 999px;
     font-size: 0.9rem;
+    font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -267,6 +272,19 @@ html:not([data-theme]) body {
 .grid-card .value {
     font-weight: 600;
     margin-bottom: 6px;
+}
+
+.grid-card a,
+.data-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.grid-card a:hover,
+.data-item a:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 .grid-card .hint {
@@ -325,6 +343,251 @@ html:not([data-theme]) body {
 
 .data-item strong {
     font-weight: 600;
+}
+
+/* Discord Presence Section */
+.discord-sync-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    height: fit-content;
+}
+
+.live-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.discord-card {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 24px;
+    padding: 22px;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+}
+
+.discord-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.discord-avatar-wrap {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.discord-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--line);
+    background: var(--mist);
+}
+
+.discord-status-dot {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--surface);
+    background-color: #6b7280;
+    transition: background-color 0.3s ease;
+}
+
+.discord-status-dot.online { background-color: #22c55e; }
+.discord-status-dot.idle { background-color: #f59e0b; }
+.discord-status-dot.dnd { background-color: #ef4444; }
+.discord-status-dot.offline { background-color: #6b7280; }
+
+.discord-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.discord-names h3 {
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.discord-names span {
+    font-size: 0.8rem;
+    color: var(--hint);
+    display: block;
+}
+
+.discord-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: capitalize;
+    margin-top: 2px;
+}
+
+.discord-activity-box {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--line);
+    padding-left: 24px;
+    min-height: 70px;
+}
+
+.discord-act-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+}
+
+.discord-act-img-wrap {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+}
+
+.discord-act-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--line);
+    display: block;
+}
+
+.discord-act-small-img {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--surface);
+    background: var(--surface);
+    object-fit: cover;
+}
+
+.discord-act-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.discord-act-header {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.discord-act-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discord-act-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.discord-act-title a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.discord-act-subtitle,
+.discord-act-state {
+    font-size: 0.82rem;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discord-act-time {
+    font-size: 0.76rem;
+    color: var(--hint);
+    margin-top: 2px;
+}
+
+.discord-custom-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.discord-idle-state {
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 860px) {
+    .discord-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .discord-activity-box {
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 18px;
+    }
 }
 
 .timeline {
@@ -413,6 +676,272 @@ html:not([data-theme]) body {
     color: var(--accent);
     font-size: 0.85rem;
     border: 1px solid var(--line);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(167, 139, 250, 0.18);
+    border-color: var(--accent);
+}
+
+.project-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+}
+
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-media img {
+    transform: scale(1.04);
+}
+
+.project-media.logo-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 20px;
+    background: radial-gradient(circle at center, var(--accent-soft), var(--surface));
+}
+
+.project-media.logo-banner img {
+    max-height: 125px;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-media.logo-banner img {
+    transform: scale(1.06);
+}
+
+/* Project Carousel */
+.project-carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--line);
+    user-select: none;
+}
+
+.carousel-track-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.carousel-slide.contain {
+    background: rgba(10, 10, 15, 0.7);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.carousel-slide.contain img {
+    object-fit: contain;
+}
+
+.project-card:hover .carousel-slide img {
+    transform: scale(1.02);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+    background: var(--accent);
+    color: var(--btn-text);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    z-index: 4;
+}
+
+.carousel-indicators .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    padding: 0;
+    transition: width 0.25s ease, background 0.25s ease;
+}
+
+.carousel-indicators .dot.active {
+    width: 22px;
+    background: var(--accent);
+}
+
+.project-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 14px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-family: "Noto Serif JP", serif;
+    line-height: 1.4;
+}
+
+.project-title a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-title a:hover {
+    color: var(--accent);
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted);
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.78rem;
+    border: 1px solid var(--line);
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
 }
 
 .gear-list {
